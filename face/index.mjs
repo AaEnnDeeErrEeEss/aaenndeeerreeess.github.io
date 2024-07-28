@@ -1,10 +1,12 @@
 const images = [
-    'images/test.jpg',
+    'images/artur sorgus.jfif',
+    'images/tiit sakkos.webp',
+    'images/tom leesnurm.webp',
+    'images/vilve kirs.webp',
 ]
 
 const play = document.createElement('span')
 play.innerHTML = '⏵'
-play.addEventListener('onclick', () => console.log('test'))
 const pause = document.createElement('span')
 pause.innerHTML = '⏸'
 const next = document.createElement('span')
@@ -31,7 +33,7 @@ class Game {
     }
 
     reveal() {
-        console.log('reveal')
+        this.cells.innerHTML = ''
     }
 
     changeState() {
@@ -43,7 +45,7 @@ class Game {
     }
 
     updateControls() {
-        this.controls.innerHTML = ""
+        this.controls.innerHTML = ''
         const controlElements = this.play ? [pause] : [play, next, show]
         controlElements.forEach(element => {
             this.controls.appendChild(element)
@@ -67,9 +69,7 @@ class Game {
         if (this.play) {
             const index = Math.floor(1 + Math.random() * this.cells.childElementCount)
             const child = document.querySelector('#cells>:nth-child(' + index + ')');
-            console.log(index, child)
             if (child) {
-                console.log(child);
                 child.remove();
             }
             setTimeout(() => this.openTile(), 2048)
