@@ -16,10 +16,10 @@ class Game {
     constructor() {
         this.photo = document.getElementById('photo')
         this.controls = document.getElementById('controls')
+        this.cells = document.getElementById('cells')
         this.level = 0
         this.play = false
         this.nextLevel()
-        this.tiles = [...Array(100).keys()]
     }
 
     nextLevel() {
@@ -27,6 +27,7 @@ class Game {
         photo.src = images[this.level]
         this.level++
         this.updateControls()
+        this.updateCells()
     }
 
     reveal() {
@@ -49,9 +50,28 @@ class Game {
         });
     }
 
+    updateCells() {
+        this.cells.innerHTML = ''
+        for (let y = 0; y < 10; y++) {
+            for (let x = 0; x < 10; x++) {
+                const cell = document.createElement('div')
+                cell.classList.add('cell')
+                cell.style.left = `${x * 64}px`
+                cell.style.top = `${y * 64}px`
+                this.cells.appendChild(cell)
+            }
+        }
+    }
+
     openTile() {
         if (this.play) {
-            console.log(this.tiles)
+            const index = Math.floor(1 + Math.random() * this.cells.childElementCount)
+            const child = document.querySelector('#cells>:nth-child(' + index + ')');
+            console.log(index, child)
+            if (child) {
+                console.log(child);
+                child.remove();
+            }
             setTimeout(() => this.openTile(), 2048)
         } else { }
     }
