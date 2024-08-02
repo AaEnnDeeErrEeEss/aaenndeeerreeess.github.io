@@ -1,8 +1,11 @@
 const images = [
     'images/artur sorgus.jfif',
+    'images/vilve kirs.webp',
     'images/tiit sakkos.webp',
     'images/tom leesnurm.webp',
-    'images/vilve kirs.webp',
+    'images/tiit sakkos 2.JPG',
+    'images/vilve kirs 2.JPG',
+    'images/artur sorgus 2.jpg',
 ]
 
 const play = document.createElement('span')
