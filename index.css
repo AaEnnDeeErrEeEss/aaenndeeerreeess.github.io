@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+details {
+    margin: 1em;
+}
+
+summary {
+    font-size: large;
+}
