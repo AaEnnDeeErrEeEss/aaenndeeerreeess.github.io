@@ -4,12 +4,17 @@ const varustus = {
     "2. kapp": {
         "mootorsaag": [
             {'tegevus': 'käivitus', 'abitekst': 'Käivitamise selgitav tekst', 'abivideo': true},
-            {'tegevus': 'keti kontroll', 'abitekst': 'Kontrolli selgitav tekst', 'abivideo': false}
+            {'tegevus': 'keti kontroll', 'abitekst': 'Kontrolli selgitav tekst', 'abivideo': false},
+            {'tegevus': 'vedelike kontroll', 'abitekst': 'Vedelike kontrolli selgitav tekst', 'abivideo': false}
         ],
         "ketaslõikur": [
-            {'tegevus': 'käivitus', 'abitekst': false, 'abivideo': false}
+            {'tegevus': 'käivitus', 'abitekst': false, 'abivideo': false},
+            {'tegevus': 'ketaste kontroll', 'abitekst': false, 'abivideo': false}
         ],
         "tööriistakast": [
+            {'tegevus': 'komplektsuse kontroll', 'abitekst': true, 'abivideo': false}
+        ],
+        "nööripääste varustus": [
             {'tegevus': 'komplektsuse kontroll', 'abitekst': true, 'abivideo': false}
         ],
     },
